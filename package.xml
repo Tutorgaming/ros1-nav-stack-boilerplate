@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pioneer_navigation</name>
+  <version>1.0.0</version>
+  <description>Obodroid Navigation Stack Setting example used in Obodroid Navigation Stack Workshop</description>
+
+  <maintainer email="theppasith.n@obodroid.com">Theppasith N.</maintainer>
+
+  <license>TODO</license>
+
+  <url type="website">https://www.obodroid.com</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>amcl</build_depend>
+  <build_depend>move_base</build_depend>
+  <build_export_depend>amcl</build_export_depend>
+  <build_export_depend>move_base</build_export_depend>
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>move_base</exec_depend>
+
+  <export>
+  </export>
+</package>

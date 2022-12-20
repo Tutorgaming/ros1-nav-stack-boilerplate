@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+<!--
+    map_server Node Launching
+    - Load yaml and pgm file into Occupancy Grid Provided in
+    /map topic (configurable)
+    - Map file contain 2 files (YAML-Config and PGM-Bitmap)
+    - We load map from config (yaml file)
+    - Config file contain path for Picture File (PGM)
+
+    Author : Theppasith N. <theppasith.n@obodroid.com>
+-->
+    <param name="use_sim_time" value="True" />
+
+    <!-- Map Yaml Location -->
+    <arg name="map_file" default="$(find pioneer_navigation)/maps/block_map/block_map.yaml"/>
+    <!-- Map Server -->
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+</launch>

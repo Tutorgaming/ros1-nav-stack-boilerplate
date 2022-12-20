@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find pioneer_navigation)/launch/navigation_stack.launch" />
+
+    <node pkg="pioneer_navigation"
+          type="bringup.py"
+          name="bringup"
+          output="screen">
+    </node>
+</launch>

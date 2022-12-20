@@ -1,0 +1,31 @@
+local_costmap:
+  # Costmap Type (costmap, voxel)
+  map_type: costmap
+
+  # Frame Setup
+  global_frame: odom
+  robot_base_frame: base_footprint
+
+  # Update Rate
+  update_frequency: 10.0
+  publish_frequency: 3.0
+  transform_tolerance: 0.5
+
+  # Global/Local Costmap
+  resolution: 0.05  # m/px
+  static_map: false
+  rolling_window: true
+  width: 8  # m
+  height: 8 # m
+
+  # C-Space Setting 
+  # 2.01142 1
+  footprint: [[1.00571, 0.5], [1.00571, -0.5], [-1.00571, -0.5], [-1.00571, 0.5]]
+# robot_radius: 1.5
+  footprint_padding: 0.05
+
+  # Costmap Layering (Top to Bottom)
+  plugins:
+   - {name: static_layer,             type: "costmap_2d::StaticLayer"}
+   - {name: obstacle_layer,           type: "costmap_2d::VoxelLayer"}
+   - {name: inflation_layer,          type: "costmap_2d::InflationLayer"}
