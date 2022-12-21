@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>pioneer_navigation</name>
+  <name>pioneer_nav_stack</name>
   <version>1.0.0</version>
   <description>Obodroid Navigation Stack Setting example used in Obodroid Navigation Stack Workshop</description>
 
